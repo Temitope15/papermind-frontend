@@ -61,12 +61,12 @@ export function AIExplainer() {
   return (
     <section
       id="ai-explainer"
-      className="py-32 px-margin-desktop bg-surface-container-low relative overflow-hidden"
+      className="section-pad-y section-pad-x bg-surface-container-low relative overflow-hidden"
     >
       <div className="absolute inset-0 dotted-bg opacity-30 -z-10" />
       <div className="absolute -top-40 -left-40 w-96 h-96 bg-primary/5 rounded-full blur-[140px] -z-10" />
 
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-2xl relative">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-2xl relative">
         {/* Copy */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -84,8 +84,8 @@ export function AIExplainer() {
             </span>
           </div>
 
-          <h2 className="font-serif text-display-lg text-on-surface leading-tight">
-            Complex documents, <br />
+          <h2 className="heading-display text-on-surface">
+            Complex documents,{' '}
             <span className="text-primary italic">simple words.</span>
           </h2>
 
@@ -135,8 +135,8 @@ function ExplainerVisual() {
     >
       <div className="absolute -top-10 -right-10 w-40 h-40 bg-primary/15 blur-3xl animate-pulse-glow" />
 
-      <div className="relative z-10 glass-panel p-8 rounded-[48px] animate-float">
-        <div className="bg-surface-container-highest rounded-[32px] p-7 flex flex-col gap-5 shadow-inner relative overflow-hidden">
+      <div className="relative z-10 glass-panel p-4 sm:p-8 rounded-[32px] sm:rounded-[48px] animate-float">
+        <div className="bg-surface-container-highest rounded-[24px] sm:rounded-[32px] p-5 sm:p-7 flex flex-col gap-5 shadow-inner relative overflow-hidden">
           {/* Header bar */}
           <div className="flex items-center gap-3 mb-2">
             <div className="w-10 h-10 rounded-full bg-primary/15 flex items-center justify-center">

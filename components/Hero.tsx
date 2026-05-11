@@ -30,14 +30,14 @@ export function Hero() {
   }
 
   return (
-    <section className="relative pt-40 pb-32 overflow-hidden px-margin-desktop">
+    <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden section-pad-x">
       {/* Atmospheric background */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[800px] bg-gradient-to-b from-primary/10 to-transparent animate-pulse-glow -z-10" />
       <div className="absolute inset-0 grid-bg opacity-30 -z-10" />
       <div className="absolute top-32 left-10 w-72 h-72 bg-primary/10 rounded-full blur-[120px] -z-10" />
       <div className="absolute top-64 right-10 w-96 h-96 bg-primary/5 rounded-full blur-[140px] -z-10" />
 
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-2xl items-center relative">
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-2xl items-center relative">
         {/* Left: copy + CTAs */}
         <div className="flex flex-col gap-lg">
           <motion.div
@@ -59,11 +59,11 @@ export function Hero() {
             initial="hidden"
             animate="visible"
             variants={fadeUp}
-            className="font-serif text-[64px] sm:text-[72px] leading-[1.05] text-on-surface max-w-xl tracking-tight"
+            className="heading-hero text-on-surface max-w-xl"
           >
-            Your documents,
-            <br />
-            explained. Your legacy,{' '}
+            Your documents, explained.
+            <br className="hidden sm:block" />{' '}
+            Your legacy,{' '}
             <span className="text-primary italic">preserved.</span>
           </motion.h1>
 
@@ -86,10 +86,10 @@ export function Hero() {
             variants={fadeUp}
             className="mt-8 flex flex-col gap-4"
           >
-            <div className="glass-panel p-2 rounded-2xl flex flex-col sm:flex-row gap-2 max-w-fit">
+            <div className="glass-panel p-2 rounded-2xl flex flex-col sm:flex-row gap-2 w-full sm:max-w-fit">
               <a
                 href={DOWNLOADS[primary]}
-                className="group bg-primary text-on-primary px-8 py-4 rounded-xl font-bold hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center gap-3 mint-glow"
+                className="group bg-primary text-on-primary px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl font-bold hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2 sm:gap-3 mint-glow"
               >
                 <span className="material-symbols-outlined filled text-[20px]">download</span>
                 <span>{PLATFORM_LABEL[primary]}</span>
@@ -102,7 +102,7 @@ export function Hero() {
                   <a
                     key={p}
                     href={DOWNLOADS[p]}
-                    className="glass-card px-6 py-4 rounded-xl font-semibold hover:bg-white/10 transition-all flex items-center gap-2 hover:border-primary/30"
+                    className="flex-1 sm:flex-none glass-card px-4 sm:px-6 py-3.5 sm:py-4 rounded-xl font-semibold hover:bg-white/10 transition-all flex items-center justify-center gap-2 hover:border-primary/30"
                   >
                     {iconFor(p)}
                     {p === 'mac' ? 'Mac' : p === 'windows' ? 'Windows' : 'Linux'}
@@ -110,7 +110,7 @@ export function Hero() {
                 ))}
               </div>
             </div>
-            <p className="text-xs text-on-surface/40 px-4 font-mono">
+            <p className="text-xs text-on-surface/40 px-1 sm:px-4 font-mono leading-relaxed">
               <span className="text-primary/70">v{VERSION}</span> · Universal binary · 100% offline core
               {detected && (
                 <>
@@ -127,7 +127,7 @@ export function Hero() {
             initial="hidden"
             animate="visible"
             variants={fadeUp}
-            className="flex items-center gap-6 mt-6"
+            className="flex flex-wrap items-center gap-x-5 gap-y-2 mt-6"
           >
             <div className="flex items-center gap-2 text-xs text-on-surface/50">
               <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse-dot" />

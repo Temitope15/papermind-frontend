@@ -164,3 +164,75 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Responsive section spacing — used in place of px-margin-desktop / py-32 */
+.section-pad-x {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@media (min-width: 640px) {
+  .section-pad-x {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media (min-width: 1024px) {
+  .section-pad-x {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+
+.section-pad-y {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+@media (min-width: 768px) {
+  .section-pad-y {
+    padding-top: 128px;
+    padding-bottom: 128px;
+  }
+}
+
+/* Display headings — scale fluidly without per-component overrides */
+.heading-display {
+  font-family: var(--font-dm-serif), 'DM Serif Display', Georgia, serif;
+  font-size: 34px;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+@media (min-width: 640px) {
+  .heading-display {
+    font-size: 40px;
+    line-height: 1.18;
+  }
+}
+@media (min-width: 1024px) {
+  .heading-display {
+    font-size: 48px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+}
+
+.heading-hero {
+  font-family: var(--font-dm-serif), 'DM Serif Display', Georgia, serif;
+  font-size: 40px;
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  font-weight: 600;
+}
+@media (min-width: 640px) {
+  .heading-hero {
+    font-size: 56px;
+    line-height: 1.08;
+  }
+}
+@media (min-width: 1024px) {
+  .heading-hero {
+    font-size: 72px;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+  }
+}

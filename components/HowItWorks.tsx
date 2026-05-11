@@ -25,7 +25,7 @@ const STEPS = [
 
 export function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-32 px-margin-desktop bg-surface-container relative overflow-hidden">
+    <section id="how-it-works" className="section-pad-y section-pad-x bg-surface-container relative overflow-hidden">
       <div className="absolute inset-0 grid-bg opacity-15 -z-10" />
       <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-primary/8 rounded-full blur-[180px] -z-10" />
 
@@ -43,7 +43,7 @@ export function HowItWorks() {
               The Process
             </span>
           </div>
-          <h2 className="font-serif text-display-lg text-on-surface">
+          <h2 className="heading-display text-on-surface">
             How it <span className="text-primary italic">works.</span>
           </h2>
           <p className="text-body-lg text-on-surface-variant max-w-xl">

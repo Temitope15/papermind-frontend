@@ -6,12 +6,12 @@ export function DocumentVault() {
   return (
     <section
       id="document-vault"
-      className="py-32 px-margin-desktop relative overflow-hidden"
+      className="section-pad-y section-pad-x relative overflow-hidden"
     >
       <div className="absolute inset-0 bg-gradient-to-tr from-primary/5 via-transparent to-primary/[0.02] -z-10" />
       <div className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-primary/8 rounded-full blur-[180px] -z-10" />
 
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center gap-2xl relative">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-2xl relative">
         {/* Copy */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -29,8 +29,8 @@ export function DocumentVault() {
             </span>
           </div>
 
-          <h2 className="font-serif text-display-lg text-on-surface leading-tight">
-            A legacy that <br />
+          <h2 className="heading-display text-on-surface">
+            A legacy that{' '}
             <span className="text-primary italic">lives on.</span>
           </h2>
 
@@ -76,9 +76,9 @@ export function DocumentVault() {
         >
           <div className="absolute -inset-10 bg-primary/15 blur-[80px] rounded-full -z-10 animate-pulse-glow" />
 
-          <div className="relative z-10 glass-panel p-10 rounded-[48px] transition-all duration-700 shadow-2xl">
+          <div className="relative z-10 glass-panel p-5 sm:p-10 rounded-[32px] sm:rounded-[48px] transition-all duration-700 shadow-2xl">
             {/* Mock document background */}
-            <div className="bg-surface-container-highest rounded-[32px] overflow-hidden relative group">
+            <div className="bg-surface-container-highest rounded-[20px] sm:rounded-[32px] overflow-hidden relative group">
               <div className="aspect-[4/5] sm:aspect-[5/6] relative">
                 {/* Texture background */}
                 <div className="absolute inset-0 bg-gradient-to-br from-amber-900/20 via-surface-container-high to-surface-container-low" />

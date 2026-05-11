@@ -28,16 +28,16 @@ export function Navbar() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
       style={{ paddingTop: padding }}
-      className="fixed top-0 left-0 right-0 z-50 flex justify-center px-4"
+      className="fixed top-0 left-0 right-0 z-50 flex justify-center px-3 sm:px-4"
     >
       <header
-        className={`navbar-glass rounded-full pl-6 pr-2 py-2 flex items-center gap-2 sm:gap-8 shadow-2xl transition-all duration-500 ${
+        className={`navbar-glass rounded-full pl-4 pr-1.5 py-1.5 sm:pl-6 sm:pr-2 sm:py-2 flex items-center gap-3 md:gap-8 shadow-2xl transition-all duration-500 ${
           scrolled ? 'shadow-black/40' : 'shadow-transparent'
         }`}
       >
-        <a href="#" className="flex items-center gap-2">
+        <a href="#" className="flex items-center gap-2 shrink-0">
           <Logo />
-          <span className="font-serif text-xl text-primary tracking-tight">PaperMind</span>
+          <span className="font-serif text-lg sm:text-xl text-primary tracking-tight">PaperMind</span>
         </a>
 
         <nav className="hidden md:flex items-center gap-1">
@@ -55,17 +55,10 @@ export function Navbar() {
 
         <a
           href="#download"
-          className="hidden sm:flex items-center bg-primary text-on-primary px-4 py-1.5 rounded-full gap-2 font-bold text-sm hover:scale-[1.04] active:scale-95 transition-all mint-glow"
+          className="flex items-center bg-primary text-on-primary px-3 sm:px-4 py-1.5 rounded-full gap-1.5 sm:gap-2 font-bold hover:scale-[1.04] active:scale-95 transition-all mint-glow shrink-0"
         >
-          <span className="material-symbols-outlined filled text-[16px]">download</span>
-          <span className="text-[12px] font-bold tracking-wide uppercase">Download</span>
-        </a>
-
-        <a
-          href="#download"
-          className="sm:hidden bg-primary text-on-primary px-4 py-2 rounded-full text-sm font-bold"
-        >
-          Download
+          <span className="material-symbols-outlined filled text-[15px] sm:text-[16px]">download</span>
+          <span className="text-[11px] sm:text-[12px] font-bold tracking-wide uppercase">Download</span>
         </a>
       </header>
     </motion.div>

@@ -20,7 +20,7 @@ export function CTA() {
   const detected = useDetectedOS()
 
   return (
-    <section id="download" className="py-32 px-margin-desktop relative overflow-hidden">
+    <section id="download" className="section-pad-y section-pad-x relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent -z-10" />
 
       <motion.div
@@ -28,7 +28,7 @@ export function CTA() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-        className="max-w-6xl mx-auto glass-panel p-12 md:p-20 rounded-[48px] md:rounded-[64px] text-center flex flex-col items-center gap-8 border-primary/20 relative overflow-hidden mint-glow-strong"
+        className="max-w-6xl mx-auto glass-panel p-7 sm:p-12 md:p-20 rounded-[32px] sm:rounded-[48px] md:rounded-[64px] text-center flex flex-col items-center gap-6 sm:gap-8 border-primary/20 relative overflow-hidden mint-glow-strong"
       >
         {/* Radial accent */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(154,246,223,0.12)_0%,transparent_60%)]" />
@@ -65,8 +65,8 @@ export function CTA() {
           </span>
         </div>
 
-        <h2 className="font-serif text-display-lg md:text-[56px] text-on-surface relative z-10 leading-tight">
-          Start your private <br />
+        <h2 className="heading-display md:text-[56px] md:leading-[1.1] text-on-surface relative z-10">
+          Start your private{' '}
           <span className="text-primary italic">legacy</span> today.
         </h2>
 
@@ -74,7 +74,7 @@ export function CTA() {
           Free. Open source. Local-only. Download once and own your AI forever.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-3 relative z-10 pt-4">
+        <div className="flex flex-col sm:flex-row gap-3 relative z-10 pt-4 w-full sm:w-auto">
           {PLATFORMS.map((p) => {
             const isActive = detected === p.id || (!detected && p.id === 'mac')
             return (
@@ -83,8 +83,8 @@ export function CTA() {
                 href={DOWNLOADS[p.id]}
                 className={
                   isActive
-                    ? 'group bg-primary text-on-primary px-10 py-5 rounded-2xl font-bold text-base hover:scale-[1.04] active:scale-95 transition-all mint-glow-strong flex items-center justify-center gap-3 relative'
-                    : 'glass-card border-white/10 px-8 py-5 rounded-2xl font-bold text-base hover:bg-white/10 transition-all flex items-center justify-center gap-3 relative'
+                    ? 'group bg-primary text-on-primary px-6 sm:px-10 py-4 sm:py-5 rounded-2xl font-bold text-base hover:scale-[1.04] active:scale-95 transition-all mint-glow-strong flex items-center justify-center gap-3 relative'
+                    : 'glass-card border-white/10 px-6 sm:px-8 py-4 sm:py-5 rounded-2xl font-bold text-base hover:bg-white/10 transition-all flex items-center justify-center gap-3 relative'
                 }
               >
                 <span
@@ -104,7 +104,7 @@ export function CTA() {
           })}
         </div>
 
-        <div className="flex items-center gap-6 mt-4 text-on-surface/40 text-xs font-mono relative z-10">
+        <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 mt-4 text-on-surface/40 text-xs font-mono relative z-10">
           <span className="flex items-center gap-1.5">
             <span className="material-symbols-outlined text-[14px]">verified</span>
             Open Source

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 export function Privacy() {
   return (
-    <section id="privacy" className="py-32 px-margin-desktop bg-surface-container-lowest relative overflow-hidden">
+    <section id="privacy" className="section-pad-y section-pad-x bg-surface-container-lowest relative overflow-hidden">
       <div className="absolute inset-0 dotted-bg opacity-20 -z-10" />
 
       <div className="max-w-7xl mx-auto relative">
@@ -22,7 +22,7 @@ export function Privacy() {
             </span>
           </div>
 
-          <h2 className="font-serif text-display-lg text-on-surface leading-tight">
+          <h2 className="heading-display text-on-surface">
             <span className="text-primary italic">100%</span> private. <span className="text-primary italic">0%</span> cloud.
           </h2>
           <p className="text-body-lg text-on-surface-variant max-w-2xl">
@@ -59,7 +59,7 @@ export function Privacy() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.5, duration: 0.8 }}
-          className="mt-16 grid grid-cols-1 md:grid-cols-4 gap-4 max-w-4xl mx-auto"
+          className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 max-w-4xl mx-auto"
         >
           {[
             { label: 'Outbound Calls', value: '0' },

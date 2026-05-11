@@ -13,7 +13,7 @@ type Props = {
 
 export function PageShell({ eyebrow, title, subtitle, updated, children }: Props) {
   return (
-    <main className="relative pt-32 pb-24 px-margin-desktop overflow-hidden">
+    <main className="relative pt-28 pb-16 sm:pt-32 sm:pb-24 section-pad-x overflow-hidden">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[700px] bg-gradient-to-b from-primary/10 to-transparent -z-10" />
       <div className="absolute inset-0 grid-bg opacity-25 -z-10" />
       <div className="absolute top-32 -left-20 w-72 h-72 bg-primary/10 rounded-full blur-[140px] -z-10" />
@@ -41,7 +41,7 @@ export function PageShell({ eyebrow, title, subtitle, updated, children }: Props
             </span>
           </div>
 
-          <h1 className="font-serif text-display-lg md:text-[56px] text-on-surface leading-tight">
+          <h1 className="heading-display md:text-[56px] md:leading-[1.1] text-on-surface">
             {title}
           </h1>
 
@@ -79,7 +79,7 @@ export function Section({
   children: React.ReactNode
 }) {
   return (
-    <section className="glass-panel rounded-[32px] p-8 md:p-12 border-white/5">
+    <section className="glass-panel rounded-[24px] sm:rounded-[32px] p-6 sm:p-8 md:p-12 border-white/5">
       <div className="flex items-center gap-4 mb-6">
         <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/15 border border-primary/30 text-primary text-sm font-mono font-bold">
           {number}

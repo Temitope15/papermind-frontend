@@ -84,12 +84,12 @@ export function Translator() {
   return (
     <section
       id="secure-translator"
-      className="py-32 px-margin-desktop bg-surface-container-lowest relative overflow-hidden"
+      className="section-pad-y section-pad-x bg-surface-container-lowest relative overflow-hidden"
     >
       <div className="absolute inset-0 grid-bg opacity-20 -z-10" />
       <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[160px] -z-10" />
 
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-2xl relative">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-2xl relative">
         {/* Copy */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -107,8 +107,8 @@ export function Translator() {
             </span>
           </div>
 
-          <h2 className="font-serif text-display-lg text-on-surface leading-tight">
-            Speak every language, <br />
+          <h2 className="heading-display text-on-surface">
+            Speak every language,{' '}
             <span className="text-primary italic">privately.</span>
           </h2>
 
@@ -118,7 +118,7 @@ export function Translator() {
             foreign documents never touch a cloud server.
           </p>
 
-          <div className="flex gap-3 mt-6">
+          <div className="grid grid-cols-3 gap-2 sm:gap-3 mt-6">
             {STATS.map((stat, i) => (
               <motion.div
                 key={stat.label}
@@ -126,10 +126,10 @@ export function Translator() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 + i * 0.12, duration: 0.6 }}
-                className="px-5 py-4 rounded-2xl glass-panel border-white/5 flex flex-col items-center gap-1 flex-1"
+                className="px-3 sm:px-5 py-3 sm:py-4 rounded-2xl glass-panel border-white/5 flex flex-col items-center gap-1"
               >
-                <span className="text-3xl font-serif text-primary">{stat.value}</span>
-                <span className="text-[9px] uppercase font-bold tracking-widest text-on-surface/50">
+                <span className="text-2xl sm:text-3xl font-serif text-primary">{stat.value}</span>
+                <span className="text-[9px] uppercase font-bold tracking-widest text-on-surface/50 text-center">
                   {stat.label}
                 </span>
               </motion.div>
@@ -169,10 +169,10 @@ function TranslatorVisual() {
       transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
       className="lg:w-1/2 w-full"
     >
-      <div className="glass-panel p-4 rounded-[40px] relative overflow-hidden">
-        <div className="flex gap-1 min-h-[420px] relative">
+      <div className="glass-panel p-3 sm:p-4 rounded-[28px] sm:rounded-[40px] relative overflow-hidden">
+        <div className="flex gap-1 min-h-[340px] sm:min-h-[420px] relative">
           {/* Original */}
-          <div className="flex-1 bg-white/[0.03] p-6 rounded-l-[32px] overflow-hidden border-r border-white/10">
+          <div className="flex-1 bg-white/[0.03] p-4 sm:p-6 rounded-l-[20px] sm:rounded-l-[32px] overflow-hidden border-r border-white/10">
             <div className="flex items-center justify-between mb-5">
               <div className="text-[10px] font-bold text-on-surface/50 uppercase tracking-widest">
                 Original
@@ -212,7 +212,7 @@ function TranslatorVisual() {
           </div>
 
           {/* Translation */}
-          <div className="flex-1 bg-primary/5 p-6 rounded-r-[32px] overflow-hidden relative">
+          <div className="flex-1 bg-primary/5 p-4 sm:p-6 rounded-r-[20px] sm:rounded-r-[32px] overflow-hidden relative">
             <div className="flex items-center justify-between mb-5">
               <div className="text-[10px] font-bold text-primary uppercase tracking-widest">
                 Translation
