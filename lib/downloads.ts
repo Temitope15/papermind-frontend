@@ -6,12 +6,13 @@ export const VERSION = '0.2.0'
 
 const RELEASE_BASE = `https://github.com/${REPO}/releases/latest/download`
 
-export const DOWNLOADS = {
-  mac: `${RELEASE_BASE}/PaperMind-${VERSION}.dmg`,
-  macArm: `${RELEASE_BASE}/PaperMind-${VERSION}-arm64.dmg`,
+export type Platform = 'mac' | 'windows' | 'linux'
+
+export const DOWNLOADS: Record<Platform, string> = {
+  mac: `${RELEASE_BASE}/PaperMind-${VERSION}-arm64.dmg`,
   windows: `${RELEASE_BASE}/PaperMind.Setup.${VERSION}.exe`,
   linux: `${RELEASE_BASE}/PaperMind-${VERSION}.AppImage`,
-  fallback: `https://github.com/${REPO}/releases/latest`,
-} as const
+}
 
-export type Platform = keyof Omit<typeof DOWNLOADS, 'fallback'>
+export const MAC_INTEL_DOWNLOAD = `${RELEASE_BASE}/PaperMind-${VERSION}.dmg`
+export const FALLBACK_URL = `https://github.com/${REPO}/releases/latest`
