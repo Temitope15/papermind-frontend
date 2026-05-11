@@ -83,7 +83,7 @@ export function DocumentVault() {
                 {/* Texture background */}
                 <div className="absolute inset-0 bg-gradient-to-br from-amber-900/20 via-surface-container-high to-surface-container-low" />
                 <div className="absolute inset-0 noise-overlay" />
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(154,246,223,0.15),transparent_50%)]" />
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(96,165,250,0.15),transparent_50%)]" />
 
                 {/* Letter envelope visual */}
                 <div className="absolute inset-x-8 top-8 bottom-32 bg-gradient-to-b from-amber-50/5 to-amber-50/[0.02] rounded-2xl border border-white/10 p-6 flex flex-col">

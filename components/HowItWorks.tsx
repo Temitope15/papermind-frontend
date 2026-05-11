@@ -60,9 +60,9 @@ export function HowItWorks() {
           >
             <defs>
               <linearGradient id="line-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#9af6df" stopOpacity="0.1" />
-                <stop offset="50%" stopColor="#9af6df" stopOpacity="0.55" />
-                <stop offset="100%" stopColor="#9af6df" stopOpacity="0.1" />
+                <stop offset="0%" stopColor="#60a5fa" stopOpacity="0.1" />
+                <stop offset="50%" stopColor="#60a5fa" stopOpacity="0.55" />
+                <stop offset="100%" stopColor="#60a5fa" stopOpacity="0.1" />
               </linearGradient>
             </defs>
 
@@ -72,7 +72,7 @@ export function HowItWorks() {
               y1="1.5"
               x2="100"
               y2="1.5"
-              stroke="rgba(154,246,223,0.15)"
+              stroke="rgba(96,165,250,0.15)"
               strokeWidth="0.4"
               strokeDasharray="1.5 1.5"
               vectorEffect="non-scaling-stroke"
@@ -92,14 +92,14 @@ export function HowItWorks() {
               whileInView={{ pathLength: 1, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 1.6, ease: [0.16, 1, 0.3, 1] }}
-              style={{ filter: 'drop-shadow(0 0 4px rgba(154,246,223,0.6))' }}
+              style={{ filter: 'drop-shadow(0 0 4px rgba(96,165,250,0.6))' }}
             />
 
             {/* Traveling pulse */}
             <motion.circle
               cy="1.5"
               r="0.9"
-              fill="#9af6df"
+              fill="#60a5fa"
               initial={{ cx: 0, opacity: 0 }}
               whileInView={{ cx: [0, 100], opacity: [0, 1, 1, 0] }}
               viewport={{ once: false }}
@@ -111,7 +111,7 @@ export function HowItWorks() {
                 ease: 'easeInOut',
                 times: [0, 0.05, 0.95, 1],
               }}
-              style={{ filter: 'drop-shadow(0 0 3px #9af6df)' }}
+              style={{ filter: 'drop-shadow(0 0 3px #60a5fa)' }}
             />
           </svg>
 

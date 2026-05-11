@@ -46,7 +46,7 @@ export function Hero() {
             animate="visible"
             variants={fadeUp}
             className="inline-flex items-center w-fit px-4 py-1.5 rounded-full glass-panel gap-2"
-            style={{ borderColor: 'rgba(154,246,223,0.2)' }}
+            style={{ borderColor: 'rgba(96,165,250,0.2)' }}
           >
             <span className="material-symbols-outlined text-primary text-[16px]">encrypted</span>
             <span className="text-label-md tracking-widest uppercase font-bold text-primary">
@@ -165,7 +165,7 @@ export function Hero() {
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="relative w-[55%] aspect-[3/4] bg-gradient-to-br from-surface-container-high to-surface-container rounded-2xl shadow-2xl border border-white/10 p-5 overflow-hidden">
                   {/* Scan line */}
-                  <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent animate-scan-line shadow-[0_0_12px_#9af6df]" />
+                  <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent animate-scan-line shadow-[0_0_12px_#60a5fa]" />
                   <div className="space-y-2">
                     <div className="h-2 w-full bg-white/20 rounded" />
                     <div className="h-2 w-4/5 bg-white/15 rounded" />
@@ -205,7 +205,7 @@ export function Hero() {
                       initial={{ width: '0%' }}
                       animate={{ width: '74%' }}
                       transition={{ duration: 2.2, ease: 'easeOut', delay: 1 }}
-                      className="h-full bg-primary shadow-[0_0_15px_#9af6df]"
+                      className="h-full bg-primary shadow-[0_0_15px_#60a5fa]"
                     />
                   </div>
                   <p className="text-[10px] text-on-surface-variant italic font-mono leading-snug">
@@ -222,7 +222,7 @@ export function Hero() {
               transition={{ delay: 1.2 }}
               className="absolute -top-4 -right-4 glass-panel rounded-full px-4 py-2 flex items-center gap-2 backdrop-blur-2xl border-primary/30"
             >
-              <span className="w-2 h-2 rounded-full bg-primary animate-pulse-dot shadow-[0_0_8px_#9af6df]" />
+              <span className="w-2 h-2 rounded-full bg-primary animate-pulse-dot shadow-[0_0_8px_#60a5fa]" />
               <span className="text-[10px] font-mono uppercase tracking-widest text-primary font-bold">
                 On-Device
               </span>

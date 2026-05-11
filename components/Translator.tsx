@@ -245,7 +245,7 @@ function TranslatorVisual() {
               })}
             </div>
             <div className="mt-6 pt-4 border-t border-primary/10 flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse-dot shadow-[0_0_8px_#9af6df]" />
+              <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse-dot shadow-[0_0_8px_#60a5fa]" />
               <p className="text-[10px] font-mono text-primary/80 uppercase tracking-widest font-bold">
                 Translated locally
               </p>

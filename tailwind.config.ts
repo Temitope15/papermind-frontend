@@ -9,9 +9,9 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: '#9af6df',
-        'on-primary': '#00382e',
-        'primary-fixed': '#98f4dd',
+        primary: '#60a5fa',
+        'on-primary': '#001233',
+        'primary-fixed': '#93c5fd',
         background: '#0f1419',
         surface: '#0f1419',
         'surface-container': '#1b2025',
@@ -20,7 +20,7 @@ const config: Config = {
         'surface-container-low': '#171c21',
         'surface-container-lowest': '#0a0f14',
         'on-surface': '#dee3ea',
-        'on-surface-variant': '#bdc9c4',
+        'on-surface-variant': '#94a3b8',
         outline: '#88938f',
         'outline-variant': '#3e4946',
       },
@@ -94,8 +94,8 @@ const config: Config = {
       },
       boxShadow: {
         glass: '0 20px 40px rgba(0,0,0,0.3)',
-        'mint-glow': '0 0 40px -10px rgba(154,246,223,0.25)',
-        'mint-glow-lg': '0 0 60px -10px rgba(154,246,223,0.45)',
+        'mint-glow': '0 0 40px -10px rgba(96,165,250,0.25)',
+        'mint-glow-lg': '0 0 60px -10px rgba(96,165,250,0.45)',
       },
       backdropBlur: {
         xs: '4px',

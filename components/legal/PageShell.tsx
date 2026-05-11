@@ -35,7 +35,7 @@ export function PageShell({ eyebrow, title, subtitle, updated, children }: Props
           </Link>
 
           <div className="inline-flex items-center w-fit px-3 py-1 rounded-full glass-panel gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse-dot shadow-[0_0_8px_#9af6df]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse-dot shadow-[0_0_8px_#60a5fa]" />
             <span className="text-[10px] tracking-widest uppercase font-bold text-primary">
               {eyebrow}
             </span>

@@ -131,7 +131,7 @@ function PrivacyCardHero({
       className="glass-panel p-xl rounded-[32px] flex flex-col items-center justify-center gap-lg border-primary/30 relative overflow-hidden group cursor-default mint-glow"
     >
       <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(154,246,223,0.1),transparent_70%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(96,165,250,0.1),transparent_70%)]" />
 
       <motion.span
         animate={{ scale: [1, 1.05, 1] }}

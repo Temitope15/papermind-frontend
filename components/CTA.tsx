@@ -31,7 +31,7 @@ export function CTA() {
         className="max-w-6xl mx-auto glass-panel p-7 sm:p-12 md:p-20 rounded-[32px] sm:rounded-[48px] md:rounded-[64px] text-center flex flex-col items-center gap-6 sm:gap-8 border-primary/20 relative overflow-hidden mint-glow-strong"
       >
         {/* Radial accent */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(154,246,223,0.12)_0%,transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(96,165,250,0.12)_0%,transparent_60%)]" />
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px] bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
 
         {/* Floating glyphs */}

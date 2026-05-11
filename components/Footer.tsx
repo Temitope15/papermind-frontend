@@ -25,9 +25,9 @@ export function Footer() {
           <div className="col-span-2 flex flex-col gap-6">
             <div className="flex items-center gap-2">
               <svg width="26" height="26" viewBox="0 0 32 32" fill="none">
-                <rect x="6" y="3" width="20" height="26" rx="3" stroke="#9af6df" strokeWidth="1.6" />
-                <path d="M11 11h10M11 16h10M11 21h6" stroke="#9af6df" strokeWidth="1.6" strokeLinecap="round" />
-                <circle cx="23" cy="22" r="3.2" fill="#9af6df" />
+                <rect x="6" y="3" width="20" height="26" rx="3" stroke="#60a5fa" strokeWidth="1.6" />
+                <path d="M11 11h10M11 16h10M11 21h6" stroke="#60a5fa" strokeWidth="1.6" strokeLinecap="round" />
+                <circle cx="23" cy="22" r="3.2" fill="#60a5fa" />
               </svg>
               <span className="font-serif text-3xl text-primary">PaperMind</span>
             </div>
@@ -37,7 +37,7 @@ export function Footer() {
             </p>
             <div className="flex flex-wrap items-center gap-3 mt-2">
               <div className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-bold flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-primary animate-pulse-dot shadow-[0_0_8px_#9af6df]" />
+                <span className="w-2 h-2 rounded-full bg-primary animate-pulse-dot shadow-[0_0_8px_#60a5fa]" />
                 Solana Devnet
               </div>
               <div className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-bold flex items-center gap-2">

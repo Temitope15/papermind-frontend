@@ -68,9 +68,9 @@ export function Navbar() {
 function Logo() {
   return (
     <svg width="22" height="22" viewBox="0 0 32 32" fill="none">
-      <rect x="6" y="3" width="20" height="26" rx="3" stroke="#9af6df" strokeWidth="1.6" />
-      <path d="M11 11h10M11 16h10M11 21h6" stroke="#9af6df" strokeWidth="1.6" strokeLinecap="round" />
-      <circle cx="23" cy="22" r="3.2" fill="#9af6df" />
+      <rect x="6" y="3" width="20" height="26" rx="3" stroke="#60a5fa" strokeWidth="1.6" />
+      <path d="M11 11h10M11 16h10M11 21h6" stroke="#60a5fa" strokeWidth="1.6" strokeLinecap="round" />
+      <circle cx="23" cy="22" r="3.2" fill="#60a5fa" />
     </svg>
   )
 }
