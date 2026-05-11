@@ -8,7 +8,8 @@ const RELEASE_BASE = `https://github.com/${REPO}/releases/latest/download`
 
 export const DOWNLOADS = {
   mac: `${RELEASE_BASE}/PaperMind-${VERSION}.dmg`,
-  windows: `${RELEASE_BASE}/PaperMind-Setup-${VERSION}.exe`,
+  macArm: `${RELEASE_BASE}/PaperMind-${VERSION}-arm64.dmg`,
+  windows: `${RELEASE_BASE}/PaperMind.Setup.${VERSION}.exe`,
   linux: `${RELEASE_BASE}/PaperMind-${VERSION}.AppImage`,
   fallback: `https://github.com/${REPO}/releases/latest`,
 } as const
