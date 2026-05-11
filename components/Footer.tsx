@@ -3,10 +3,10 @@
 import { REPO } from '@/lib/downloads'
 
 const PRODUCT_LINKS = [
-  { href: '#ai-explainer', label: 'AI Explainer' },
-  { href: '#document-vault', label: 'Legacy Vault' },
-  { href: '#secure-translator', label: 'Translator' },
-  { href: '#download', label: 'Download' },
+  { href: '/#ai-explainer', label: 'AI Explainer' },
+  { href: '/#document-vault', label: 'Legacy Vault' },
+  { href: '/#secure-translator', label: 'Translator' },
+  { href: '/#download', label: 'Download' },
 ]
 
 const COMPANY_LINKS = [

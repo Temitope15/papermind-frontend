@@ -4,10 +4,10 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import { useEffect, useState } from 'react'
 
 const NAV_LINKS = [
-  { href: '#ai-explainer', label: 'AI Explainer' },
-  { href: '#document-vault', label: 'Document Vault' },
-  { href: '#secure-translator', label: 'Translator' },
-  { href: '#how-it-works', label: 'How It Works' },
+  { href: '/#ai-explainer', label: 'AI Explainer' },
+  { href: '/#document-vault', label: 'Document Vault' },
+  { href: '/#secure-translator', label: 'Translator' },
+  { href: '/#how-it-works', label: 'How It Works' },
 ]
 
 export function Navbar() {
@@ -35,7 +35,7 @@ export function Navbar() {
           scrolled ? 'shadow-black/40' : 'shadow-transparent'
         }`}
       >
-        <a href="#" className="flex items-center gap-2 shrink-0">
+        <a href="/" className="flex items-center gap-2 shrink-0">
           <Logo />
           <span className="font-serif text-lg sm:text-xl text-primary tracking-tight">PaperMind</span>
         </a>
@@ -54,7 +54,7 @@ export function Navbar() {
         </nav>
 
         <a
-          href="#download"
+          href="/#download"
           className="flex items-center bg-primary text-on-primary px-3 sm:px-4 py-1.5 rounded-full gap-1.5 sm:gap-2 font-bold hover:scale-[1.04] active:scale-95 transition-all mint-glow shrink-0"
         >
           <span className="material-symbols-outlined filled text-[15px] sm:text-[16px]">download</span>
