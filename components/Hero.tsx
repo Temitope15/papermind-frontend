@@ -146,88 +146,194 @@ export function Hero() {
 
         {/* Right: animated visual */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.92 }}
+          initial={{ opacity: 0, scale: 0.94 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.4 }}
-          className="relative"
+          className="relative isolate"
         >
-          <div className="absolute inset-0 bg-primary/15 blur-[120px] rounded-full scale-90 animate-pulse-glow" />
-          <div className="relative z-10 glass-panel p-6 rounded-[48px] animate-float">
-            <div className="aspect-square w-full glass-card rounded-[36px] overflow-hidden relative bg-surface-container-lowest">
-              {/* Swirling rings */}
-              <div className="absolute inset-0 opacity-50 animate-swirl">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] border-[1px] border-primary/20 rounded-full" />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100%] h-[100%] border-[1px] border-primary/10 rounded-full border-dashed" />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] border-[1px] border-primary/5 rounded-full" />
+          {/* Atmospheric backdrop */}
+          <div className="absolute -inset-12 bg-primary/15 blur-[140px] rounded-full -z-10 animate-pulse-glow" />
+          <div className="absolute -top-10 -right-10 w-64 h-64 bg-primary/10 rounded-full blur-[100px] -z-10" />
+          <div className="absolute -bottom-10 -left-10 w-72 h-72 bg-primary/8 rounded-full blur-[120px] -z-10" />
+
+          {/* Model chip — top left, floats */}
+          <motion.div
+            initial={{ opacity: 0, x: -10 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 1.1, duration: 0.6 }}
+            className="hidden sm:block absolute -top-5 -left-3 z-30"
+          >
+            <motion.div
+              animate={{ y: [0, -5, 0] }}
+              transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
+              className="glass-panel rounded-2xl px-3.5 py-2 backdrop-blur-2xl border-white/10 flex items-center gap-2 shadow-xl"
+            >
+              <span className="material-symbols-outlined filled text-primary text-[16px]">psychology</span>
+              <div className="flex flex-col leading-tight">
+                <span className="text-[10px] font-mono font-bold text-on-surface tracking-wider">Llama 3.2 · 1B</span>
+                <span className="text-[8px] font-mono text-on-surface/50 uppercase tracking-widest">Quantized · Q4</span>
+              </div>
+            </motion.div>
+          </motion.div>
+
+          {/* On-Device pill — top right */}
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.0 }}
+            className="absolute -top-3 -right-2 sm:-top-4 sm:-right-4 glass-panel rounded-full px-3 py-1.5 flex items-center gap-2 backdrop-blur-2xl border-primary/30 z-30"
+          >
+            <span className="w-2 h-2 rounded-full bg-primary animate-pulse-dot shadow-[0_0_8px_#60a5fa]" />
+            <span className="text-[10px] font-mono uppercase tracking-widest text-primary font-bold">
+              On-Device
+            </span>
+          </motion.div>
+
+          {/* Main document panel */}
+          <div className="relative z-10 glass-panel p-4 sm:p-6 rounded-[36px] sm:rounded-[48px] animate-float shadow-2xl">
+            <div className="aspect-[4/5] sm:aspect-square w-full glass-card rounded-[26px] sm:rounded-[36px] overflow-hidden relative bg-surface-container-lowest">
+
+              {/* Soft gradient + noise + grid backdrop */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5" />
+              <div className="absolute inset-0 grid-bg opacity-30" />
+              <div className="absolute inset-0 noise-overlay" />
+
+              {/* Document title bar */}
+              <div className="absolute inset-x-0 top-0 px-5 py-4 flex items-center gap-3 border-b border-white/5 bg-surface-container/40 backdrop-blur-md z-10">
+                <div className="w-8 h-8 rounded-lg bg-primary/15 border border-primary/20 flex items-center justify-center shrink-0">
+                  <span className="material-symbols-outlined text-primary text-[16px]">description</span>
+                </div>
+                <div className="flex flex-col min-w-0 leading-tight">
+                  <span className="text-[11px] font-bold text-on-surface tracking-tight truncate">
+                    Legal_Contract.pdf
+                  </span>
+                  <span className="text-[9px] font-mono text-on-surface/40 uppercase tracking-widest">
+                    Page 1 / 4 · 184 KB
+                  </span>
+                </div>
+                <span className="ml-auto text-[9px] font-mono uppercase tracking-widest text-primary/90 flex items-center gap-1.5 shrink-0">
+                  <span className="w-1 h-1 rounded-full bg-primary animate-pulse-dot" />
+                  Live
+                </span>
               </div>
 
-              {/* Center document mock */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="relative w-[55%] aspect-[3/4] bg-gradient-to-br from-surface-container-high to-surface-container rounded-2xl shadow-2xl border border-white/10 p-5 overflow-hidden">
-                  {/* Scan line */}
-                  <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent animate-scan-line shadow-[0_0_12px_#60a5fa]" />
-                  <div className="space-y-2">
-                    <div className="h-2 w-full bg-white/20 rounded" />
-                    <div className="h-2 w-4/5 bg-white/15 rounded" />
-                    <div className="h-2 w-full bg-white/15 rounded" />
-                    <div className="h-2 w-3/4 bg-white/10 rounded" />
-                    <div className="h-2 w-full bg-white/10 rounded" />
-                    <div className="h-2 w-5/6 bg-white/10 rounded" />
-                  </div>
-                  <div className="mt-4 space-y-2">
-                    <div className="h-2 w-2/3 bg-primary/40 rounded" />
-                    <div className="h-2 w-full bg-primary/20 rounded" />
-                  </div>
+              {/* Document body — styled serif text with a highlighted clause */}
+              <div className="absolute inset-x-0 top-[60px] bottom-[112px] px-5 sm:px-6 py-4 overflow-hidden">
+                <div className="font-serif text-[10.5px] sm:text-[11px] leading-[1.65] text-on-surface/70 space-y-2.5">
+                  <p>
+                    <span className="text-on-surface/50 font-mono text-[9px] mr-1.5">§1</span>
+                    WHEREAS the parties hereby enter into a binding agreement with
+                    respect to the services described in <span className="italic">Schedule A</span>.
+                  </p>
+                  <p>
+                    The Subscriber shall provide a minimum twenty-four (24) month
+                    term, with automatic renewal unless written notice is given.
+                  </p>
+                  <p>
+                    Termination prior to the conclusion of the minimum term
+                    incurs a{' '}
+                    <span className="relative inline-block bg-primary/15 text-primary font-semibold not-italic rounded px-1 ring-1 ring-primary/40">
+                      $249 early-termination fee
+                      <motion.span
+                        initial={{ scaleX: 0 }}
+                        animate={{ scaleX: 1 }}
+                        transition={{ delay: 1.6, duration: 0.5 }}
+                        className="absolute -bottom-px left-0 right-0 h-px bg-primary origin-left"
+                      />
+                    </span>
+                    .
+                  </p>
+                  <p>
+                    Provider shall not be liable for indirect, incidental, or
+                    consequential damages in excess of fifty dollars ($50).
+                  </p>
+                  <p className="text-on-surface/40">
+                    Any dispute arising hereunder shall be submitted to binding
+                    arbitration in accordance with...
+                  </p>
                 </div>
               </div>
 
-              {/* Bottom UI overlay */}
-              <div className="absolute bottom-6 left-6 right-6">
-                <div className="glass-card p-4 rounded-2xl flex flex-col gap-3 border-white/20 backdrop-blur-2xl">
+              {/* Scan line */}
+              <div className="absolute inset-x-0 top-[60px] h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent animate-scan-line shadow-[0_0_12px_#60a5fa] pointer-events-none" />
+
+              {/* Bottom UI: extraction progress */}
+              <div className="absolute bottom-3 inset-x-3 sm:bottom-4 sm:inset-x-4">
+                <div className="glass-card p-3 sm:p-4 rounded-2xl border-white/15 backdrop-blur-2xl flex flex-col gap-2.5">
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
-                        <span className="material-symbols-outlined text-primary text-[18px]">
-                          description
-                        </span>
-                      </div>
-                      <span className="text-xs font-bold text-on-surface tracking-tight">
-                        Legal_Contract.pdf
-                      </span>
-                    </div>
-                    <span className="text-[10px] font-bold text-primary uppercase tracking-widest flex items-center gap-1.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse-dot" />
-                      Analyzing
+                    <span className="text-[10px] font-mono uppercase tracking-widest text-on-surface/60">
+                      Extracting clauses
+                    </span>
+                    <span className="text-[10px] font-mono font-bold text-primary">
+                      74<span className="text-on-surface/40">%</span>
                     </span>
                   </div>
-                  <div className="h-1.5 bg-white/10 rounded-full overflow-hidden">
+                  <div className="h-1 bg-white/10 rounded-full overflow-hidden">
                     <motion.div
                       initial={{ width: '0%' }}
                       animate={{ width: '74%' }}
                       transition={{ duration: 2.2, ease: 'easeOut', delay: 1 }}
-                      className="h-full bg-primary shadow-[0_0_15px_#60a5fa]"
+                      className="h-full bg-gradient-to-r from-primary/80 via-primary to-primary shadow-[0_0_12px_#60a5fa]"
                     />
                   </div>
                   <p className="text-[10px] text-on-surface-variant italic font-mono leading-snug">
-                    Extracting confidential clauses via Local LLM<span className="cursor-stream" />
+                    Reasoning over §3 · obligations<span className="cursor-stream" />
                   </p>
                 </div>
               </div>
             </div>
-
-            {/* Floating badge: on-device */}
-            <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.2 }}
-              className="absolute -top-4 -right-4 glass-panel rounded-full px-4 py-2 flex items-center gap-2 backdrop-blur-2xl border-primary/30"
-            >
-              <span className="w-2 h-2 rounded-full bg-primary animate-pulse-dot shadow-[0_0_8px_#60a5fa]" />
-              <span className="text-[10px] font-mono uppercase tracking-widest text-primary font-bold">
-                On-Device
-              </span>
-            </motion.div>
           </div>
+
+          {/* Floating AI annotation callout — overlaps doc on the right */}
+          <motion.div
+            initial={{ opacity: 0, x: 20, scale: 0.94 }}
+            animate={{ opacity: 1, x: 0, scale: 1 }}
+            transition={{ delay: 1.4, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            className="absolute right-1 sm:-right-6 top-[42%] -translate-y-1/2 z-30 max-w-[230px] sm:max-w-[260px]"
+          >
+            <motion.div
+              animate={{ y: [0, -6, 0] }}
+              transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut' }}
+              className="glass-panel rounded-2xl p-4 backdrop-blur-2xl border-primary/30 shadow-2xl mint-glow"
+            >
+              <div className="flex items-center gap-2 mb-2">
+                <div className="w-6 h-6 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center">
+                  <span className="material-symbols-outlined filled text-primary text-[12px]">auto_awesome</span>
+                </div>
+                <span className="text-[9px] font-mono font-bold uppercase tracking-widest text-primary">
+                  Plain English
+                </span>
+                <span className="ml-auto text-[8px] font-mono text-on-surface/40 uppercase tracking-widest">
+                  0.4s
+                </span>
+              </div>
+              <p className="text-[12px] sm:text-[13px] text-on-surface leading-snug">
+                Cancelling before <span className="font-semibold text-on-surface">month 24</span> costs you{' '}
+                <span className="text-primary font-semibold">$249</span>.
+              </p>
+              <div className="mt-3 pt-2.5 border-t border-white/5 flex items-center justify-between">
+                <button className="text-[10px] font-mono uppercase tracking-widest text-primary/80 hover:text-primary flex items-center gap-1">
+                  <span className="material-symbols-outlined filled text-[12px]">volume_up</span>
+                  Listen
+                </button>
+                <span className="text-[9px] font-mono text-on-surface/40">§3</span>
+              </div>
+            </motion.div>
+          </motion.div>
+
+          {/* Bottom-left language chip */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.6, duration: 0.6 }}
+            className="hidden sm:flex absolute -bottom-3 left-6 z-30"
+          >
+            <div className="glass-panel rounded-full px-3 py-1.5 flex items-center gap-2 backdrop-blur-2xl border-white/10 shadow-xl">
+              <span className="text-[10px] font-mono font-bold text-on-surface tracking-wider">EN</span>
+              <span className="material-symbols-outlined text-primary text-[12px]">sync_alt</span>
+              <span className="text-[10px] font-mono font-bold text-on-surface/70 tracking-wider">DE · FR · ES</span>
+            </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>
