@@ -2,7 +2,7 @@
 // Until then, the buttons fall back to the latest release page.
 
 export const REPO = 'Temitope15/papermind'
-export const VERSION = '0.2.0'
+export const VERSION = '0.2.1'
 
 const RELEASE_BASE = `https://github.com/${REPO}/releases/latest/download`
 
